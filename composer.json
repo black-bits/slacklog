@@ -1,0 +1,46 @@
+{
+  "name": "black-bits/slacklog",
+  "description": "Send log-messages to slack in one line of code",
+  "license": "MIT",
+  "homepage": "https://github.com/black-bits/slacklog",
+  "support": {
+    "issues": "https://github.com/black-bits/slacklog/issues",
+    "source": "https://github.com/black-bits/slacklog"
+  },
+  "authors": [
+    {
+      "name": "Oliver Heck",
+      "email": "mail@oliverheck.de"
+    },
+    {
+      "name": "Andreas Przywara",
+      "email": "andreas.przywara@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "illuminate/support": "^5.5",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "BlackBits\\SlackLog\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BlackBits\\SlackLog\\SlackLogServiceProvider"
+      ],
+      "aliases": {
+        "SlackLog": "BlackBits\\SlackLog\\SlackLogFacade"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
